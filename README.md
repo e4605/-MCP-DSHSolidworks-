@@ -1,6 +1,6 @@
-建议下载 到本地后再安装
+**建议下载 到本地后再安装**
 **# -MCP-DSHSolidworks-
-Deepseek Harness SW插件，可以通过MCP调用SW的各种技能
+Deepseek Harness SW插件，可以通过MCP调用SW的各种技能**
 # SolidWorks 建模插件（DSH）
 
 > 作者：**e^46 zhaoyi**
