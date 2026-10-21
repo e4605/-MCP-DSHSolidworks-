@@ -1,0 +1,29 @@
+{
+  "name": "@local/dsh-solidworks",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "author": "e^46 zhaoyi",
+  "description": "Drive local SolidWorks through DSH: 15 lightweight sw_* tools plus the 86-tool SolidWorks MCP server (mcp__solidworks__*), with automatic quality checks. Author: e^46 zhaoyi.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/bridge.js",
+    "lib/mcp.js",
+    "scripts/sw-bridge.vbs",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

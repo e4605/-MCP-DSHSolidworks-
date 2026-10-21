@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "SolidWorks 建模",
+    "description": "用 DSH 直接驱动本机 SolidWorks 建模：15 个轻量 sw_* 工具 + 内置 86 工具 SolidWorks MCP 服务器（mcp__solidworks__*），含配合、运动检查、截图、导出与自动质检。作者：e^46 zhaoyi。"
+  }
+}

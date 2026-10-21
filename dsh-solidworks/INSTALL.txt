@@ -1,0 +1,34 @@
+DSH SolidWorks 插件 —— 安装说明（作者：e^46 zhaoyi）
+=========================================================
+
+一、先解压
+  把本压缩包解压到任意目录，得到 dsh-solidworks 文件夹
+  （里面应有 package.json、cordis.patch.yml、index.js）。
+
+二、安装到 DSH
+  方式 A（推荐，界面）：插件管理 → 安装 bundle → 选择解压出来的
+        dsh-solidworks 文件夹（必须是含 package.json 的那一层）。
+  方式 B（让 AI 执行）：告诉助手：
+        「用 plugin_manager install_bundle 安装 <解压路径>\dsh-solidworks」
+  注意：不能直接安装 .zip 文件本身 —— DSH/pnpm 只接受目录（或 npm 包名）。
+
+三、首次使用前装 MCP 服务器（一次性）
+  <DSH 运行时 Python>\python.exe -m pip install solidworks-mcp
+  或装好插件后调用工具 sw_mcp_check（参数 install=true）自动安装并自检。
+
+四、使用
+  打开 SolidWorks，保持运行；对助手说：
+    「用 MCP 建一个 100×60×20 的平板，四角 R5，保存到 D:\parts\plate.sldprt」
+  质检通过后再宣布完成；装配体可加同心配合（铰链）并用运动检查验证。
+
+五、示例（examples/ 文件夹）
+  - swmcp-lamp.sldasm   三关节可活动台灯（3 铰链配合 + 灯罩）
+  - fr4-linkage.sldasm  四杆机构（4 同心 + 1 角度配合，运动检查通过）
+
+六、常见问题
+  - 安装报 ERR_PNPM_NOT_PACKAGE_DIRECTORY：装的是 .zip 而不是解压后的目录。
+  - MCP 工具（mcp__solidworks__*）不出现：调用 sw_mcp_check 检查；必要时
+    install=true 自动安装服务器包，然后重载插件。
+  - 保存失败提示“文件被占用”：先在 SolidWorks 里关闭同名文档再保存。
+
+© 2026 e^46 zhaoyi

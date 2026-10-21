@@ -1,0 +1,14 @@
+- insert:
+    - id: dsh-solidworks
+      name: '@local/dsh-solidworks'
+      config: {}
+    - id: solidworks-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: solidworks
+        transport: stdio
+        command: 'C:\Users\Lenovo\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe'
+        args:
+          - '-m'
+          - 'solidworks_mcp.server'
+        failOnStartupError: true
